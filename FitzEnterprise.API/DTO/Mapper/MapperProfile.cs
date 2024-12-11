@@ -16,7 +16,9 @@ namespace FitzEnterprise.Mapper
             CreateMap<VendaModel,VendaDTO>().ReverseMap();
             CreateMap<InsertUsuario, InsertUsuarioDTO>().ReverseMap();
             CreateMap<UsuarioModel, InsertUsuarioDTO>().ReverseMap();
-
+            CreateMap<InsertClienteModel, InsertClienteDTO>().ReverseMap();
+            CreateMap<InsertProdutosModel, InsertProdutoDTO>().ReverseMap();
+            CreateMap<InsertVendaModel, InsertVendaDTO>().ReverseMap();
 
         }
     }

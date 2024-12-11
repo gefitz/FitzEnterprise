@@ -18,9 +18,9 @@ namespace FitzEnterprise.API.Services
             _mapper = mapper;
         }
 
-        public async Task<ReturnModel> CreateProdutoAsync(ProdutoDTO produto)
+        public async Task<ReturnModel> CreateProdutoAsync(InsertProdutoDTO produto)
         {
-            var modelProduto = _mapper.Map<ProdutosModel>(produto);
+            var modelProduto = _mapper.Map<InsertProdutosModel>(produto);
             produto.dthCriacaoProduto = DateTime.Now;
             produto.dthAlteracaoProduto = DateTime.Now;
             ret = await _mysql.ExecuteInsert("tbl_Produtos", modelProduto);

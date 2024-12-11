@@ -18,7 +18,7 @@ namespace FitzEnterprise.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<ReturnModel>> CreateCliente(ClienteDTO clienteDTO)
+        public async Task<ActionResult<ReturnModel>> CreateCliente(InsertClienteDTO clienteDTO)
         {
             ReturnModel ret = new ReturnModel();
             if (clienteDTO == null)

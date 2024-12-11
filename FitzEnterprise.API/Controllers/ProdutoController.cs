@@ -21,7 +21,7 @@ namespace FitzEnterprise.API.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<ReturnModel>> CreateProduto(ProdutoDTO produtoDTO)
+        public async Task<ActionResult<ReturnModel>> CreateProduto(InsertProdutoDTO produtoDTO)
         {
             ReturnModel ret = new ReturnModel();
             if (produtoDTO == null)

@@ -21,7 +21,7 @@ namespace FitzEnterprise.API.Controllers
 
         [HttpPost]
         [Authorize]
-        public async Task<ActionResult<ReturnModel>> CreateVenda(VendaDTO vendaDTO)
+        public async Task<ActionResult<ReturnModel>> CreateVenda(InsertVendaDTO vendaDTO)
         {
             ReturnModel ret = new ReturnModel();
             if (vendaDTO == null)

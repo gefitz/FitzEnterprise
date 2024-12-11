@@ -21,9 +21,9 @@ namespace FitzEnterprise.API.Services
             _mapper = mapper;
         }
 
-        public async Task<ReturnModel> CreateClienteAsync(ClienteDTO cliente)
+        public async Task<ReturnModel> CreateClienteAsync(InsertClienteDTO cliente)
         {
-            var modelCliente = _mapper.Map<ClienteModel>(cliente);
+            var modelCliente = _mapper.Map<InsertClienteModel>(cliente);
             modelCliente.dthCriacaoCliente = DateTime.Now;
             modelCliente.dthAlteracaoCliente= DateTime.Now;
             ret = await _mysql.ExecuteInsert("tbl_Clientes", modelCliente);
